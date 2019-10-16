@@ -4,6 +4,26 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function planet(planetName) {
+const type = 'Human';
+console.log(`We are ${type}.`); // Cannot call popularSport OR nickName because its not in scope of the planet function.
+debugger;
+function country(countryName) {
+const popularSport = 'Football';
+console.log(`We are ${type} who watch ${popularSport}! `); // Cannot use nickName because it's not in scope of the country function.
+debugger;
+function state(stateName) {
+const nickName = 'Sunshine State';
+console.log(`We are ${type} who watch ${popularSport} and we call our state the ${nickName}!`);
+debugger;
+} // state ends here
+state('Florida');
+} // country ends here
+country('USA');
+} // planet ends here
+planet('Earth');
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
